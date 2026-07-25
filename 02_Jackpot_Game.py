@@ -24,6 +24,11 @@ while True:
             print("You won a Mercedes car.")
         else:
             print("Better luck next time!")
-        print("Executed successfully!")
+        print("Program Executed successfully!")
+
     except Exception as e:
         print(f"Error: {e}")
+
+    finally:
+        print("Program fully executed successfully!")
+        print("Have fun!")

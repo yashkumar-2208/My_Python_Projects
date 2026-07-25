@@ -1,12 +1,10 @@
-import math
-
-print("This calculator can perform calculations like: '+', '-', '*', '/', '//, '%', '**'" )
+print("A Calculator")
 
 history = []
 
-class calculator():
+class Calculator:
 
-    def my_calculator():
+    def my_calculator(self):
 
         try:
 
@@ -23,38 +21,48 @@ class calculator():
                 if user_input == 1:
 
                     a = float(input("Enter the first numbers here for calculation: "))
-                    b = float(input("Enter the second seconds here for calculation: "))
+                    b = float(input("Enter the second numbers here for calculation: "))
 
                     Menubar_2 = ['+', '-', '*', '/', '//','%','**']
                     print(Menubar_2)
 
                     user_choices = input("Enter your choice: ")
 
-                    if '+' in user_choices: 
+                    if user_choices == "+": 
                         result = (f"The sum is: {a+b}")
                         
-                    elif '-' in user_choices:
+                    elif user_choices == "-":
                         result = (f"The difference is: {a-b}")
                         
-                    elif '*' in user_choices:
+                    elif user_choices == "*":
                         result = (f"The multiplication is: {a*b}")
                         
-                    elif '/' in user_choices:
-                        result = (f"The division is: {a/b}")
+                    elif user_choices == "/":
+                        if b == 0:
+                            result = "Cannot divide by zero!"
+                        else:
+                            result = f"The division is: {a/b}"
                         
-                    elif '//' in user_choices:
-                        result = (f"The floor division is: {a//b}")
+                    elif user_choices == "//":
+                        if b == 0:
+                            result = "Cannot divide by zero!"
+                        else:
+                            result = f"The floor division is: {a//b}"
                         
-                    elif '%' in user_choices:
-                        result = (f"The modulus is: {a%b}")
+                    elif user_choices == "%":
+                        if b == 0:
+                            result = "Cannot divide by zero!"
+                        else:
+                            result = f"The modulus is: {a%b}"
                         
-                    elif '**' in user_choices:
+                    elif user_choices == "**":
                         result = (f"The power is: {a**b}")
                         
                     else:
-                        print("Invalid input!")
+                        result = "Invalid input!"
+
                     print(result)
-                    print("Operation executed successfully!")
+                    
 
                     history.append(f"Your numbers and choices are: {a}{user_choices}{b} \nCalculated result is: {result}")
 
@@ -84,6 +92,11 @@ class calculator():
                     
         except Exception as e:
             print(f"Error: {e}")
+        
+        finally:
+            print("Operation fully executed successfully!")
             
 
-calculator.my_calculator()
+if __name__ == "__main__":
+    calculator_system = Calculator()
+    calculator_system.my_calculator()

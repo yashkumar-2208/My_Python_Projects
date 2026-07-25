@@ -14,12 +14,13 @@ the content, URLs, text, and information encoded into QR codes generated through
 The developer does not endorse, verify, monitor, or take responsibility for user-generated content. 
 Any use of this service for unlawful, fraudulent, harmful, misleading, or unauthorized activities is strictly prohibited.
 Users must comply with all applicable laws and regulations, including the provisions of the 
-Information Technology Act, 2000 (Act No. 21 of 2000), and other relevant laws of India.
+Information Technology Act, 2000 (Act No. 21 of 2000) , and other relevant laws of India.
 AGE Registration: To use this you must be 18 or 18+.
  """)
 #-------------------------------------------#
 
-greetings = ["Nice to meet you", "Welcome","Glad to see you","Move it","Go ahead","Let's start","Move ahead"]
+greetings = ["Nice to meet you", "Welcome","Glad to see you","Move it","Go ahead",
+            "Let's start","Move ahead", "Coffee and QR?"]
 
 class QR_Code:
 

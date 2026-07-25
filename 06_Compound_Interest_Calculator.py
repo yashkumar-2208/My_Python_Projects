@@ -32,7 +32,7 @@ class Compound_Interest_Calculator():
                     continue
 
                 total = principle * pow((1 + rate_of_interest / 100), time_period)
-                print(f"Your total balance after calculation of \n Total years: {time_period} year/s \n Total rate of interest: {rate_of_interest}% \n total amount: ${principle} \n Total value: ${total:.2f} \n Interest earned: ${total - principle}")
+                print(f"Your total balance after calculation of \n Total years: {time_period} year/s \n Total rate of interest: {rate_of_interest}% \n total amount: {principle} \n Total value: {total:.2f} \n Interest earned: {total - principle}")
             
             except Exception as e:
                 (f"Error: {e}")

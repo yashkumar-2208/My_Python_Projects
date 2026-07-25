@@ -2,9 +2,9 @@ import secrets
 import string
 import random
 
-class Password_generator():
+class Password_generator:
 
-    def secured_password():
+    def secured_password(self):
 
         a = string.ascii_lowercase
         b = string.ascii_uppercase
@@ -33,6 +33,7 @@ Choose an option:
 4. Special Character Password (!@#$...)
 5. Mixed Password (Letters + Numbers + Symbols)
 6. Recommended Secure Password ⭐
+7. Enter exit or quit to exit from the Password Generator
 
 Note:
 • The recommended option provides maximum security.
@@ -46,7 +47,7 @@ Note:
     
 
             while True: 
-                user_input = input("Enter your choice here between (1 to 6): ")
+                user_input = input("Enter your choice here between (1 to 7): ")
        
                 if user_input == "1":
 
@@ -145,11 +146,15 @@ Note:
                     print("Strength level: Powerful")
                     stored_password = password
 
+                elif user_input == "7":
+                    print("Goodbye! ")
+                    break
+
                 elif user_input in ["show pass", "show password","Show pass","Show password",
                                     "show pas", "sho pass", "sho pas","sho password","stored pass",
                                     "stored password","Stored password","Saved pass","Saved password"]:
                     if stored_password:
-                        print(f"Your stored password is: {password}")
+                        print(f"Your stored password is: {stored_password}")
                         print("After closing the app you will not able to see your stored password again!")
 
                           
@@ -158,11 +163,17 @@ Note:
 
 
                 else:
-                    print("Choose only between (1 - 6)!")
+                    print("Choose only between (1 - 7)!")
                     continue
                          
 
         except Exception as e:
             print(f"Error {e}")
 
-Password_generator.secured_password()
+        finally:
+            print("Program fully executed successfully!")
+
+
+if __name__ == "__main__":
+    password_system = Password_generator()
+    password_system.secured_password()

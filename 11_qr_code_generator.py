@@ -7,7 +7,7 @@ import random
 #---- IMPORTS ----#
 
 #------------ IMPORTANT INFO ----------------#
-print("Disclaimer & Acceptable Use Policy")
+print("\nDisclaimer & Acceptable Use Policy")
 print("""
 This QR Code Generator is provided for lawful purposes only. Users are solely responsible for
 the content, URLs, text, and information encoded into QR codes generated through this service.
